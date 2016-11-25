@@ -232,30 +232,48 @@ So therefore, $\sin^2(x)$ is our derivative.
 
 \section{Limits}
 
-The purpose of limits is to find what a function approaches at a certain number that it is not defined for. For example, let's say we have the function $f(x) = \frac{x^2}{x}$ and $x = 0$ in this particular case. Since we are not allowed to divide by zero, this function is not defined there. However, the function may approach a certain number.
+The purpose of limits is to find what a function approaches at a certain number that it is not defined for. 
+For example, let's say we have the function $f(x) = \frac{x^2}{x}$ and $x = 0$ in this particular case. 
+Since we are not allowed to divide by zero, this function is not defined there. 
+However, the function may approach a certain number.
 
 \begin{figure}[H]
 \caption{Function approaching $1$ as $x$ goes to $0$}
 \includegraphics[scale=0.8]{images.png}
 \end{figure}
 
-In the above graph, while the function is not defined at $0$, it approaches, or comes near to, $1$. There are several different "types" of limits and rules for calculating them. 
+In the above graph, while the function is not defined at $0$, it approaches, or comes near to, $1$. 
+There are several different "types" of limits and rules for calculating them. 
 
-The first type of limit you could call an "easy" limit. All you have to do is plug in the number you are approaching for your variable, because the function doesn't violate any rules like we described above. So for example, if you have the limit
+The first type of limit you could call an "easy" limit. 
+All you have to do is plug in the number you are approaching for your variable, because the function doesn't violate any rules like we described above. 
+So for example, if you have the limit
 
 \begin{equation*}
     \lim\limits_{x\rightarrow 1} x
 \end{equation*}
 
-You would just get 1. The second type of limit could be called a "$\frac{0}{0}$" limit. It does violate the rules, and we have to do some algebraic manipulation to get it into a form we can work with. This might be done via factoring a polynomial, normalizing the denominator or numerator, or some such method.
+You would just get 1. 
+The second type of limit could be called a "$\frac{0}{0}$" limit. 
+It does violate the rules, and we have to do some algebraic manipulation to get it into a form we can work with. 
+This might be done via factoring a polynomial, normalizing the denominator or numerator, or some such method.
 
-A quick algebra side-note here on how to do these things. Factoring a polynomial mainly references factoring quadratics, or equations of the form $ax^2 + bx + c$ ($=0$). We factor the left side by using this general method: find the factors of $ac$ and see which add up to $b$. Note that you can change the signs of the factors, that is, if you have $ac = 10$ and the factors are $1, \, 2, \, 5, \, 10$, and $b = 3$, you can do $5-2 = 3$. After this, we then take those two numbers, $5$ and $-2$ and rewrite it as $ax^2 + 5x -2x + c$. We then put parentheses in: $(ax^2 + 5x) + (-2x + c)$. We then factor out the biggest common number (or variable) out of each of the parentheses.
+A quick algebra side-note here on how to do these things. 
+Factoring a polynomial mainly references factoring quadratics, or equations of the form $ax^2 + bx + c$ ($=0$). 
+We factor the left side by using this general method: find the factors of $ac$ and see which add up to $b$. 
+Note that you can change the signs of the factors, that is, if you have $ac = 10$ and the factors are $1, \, 2, \, 5, \, 10$, and $b = 3$, you can do $5-2 = 3$. 
+After this, we then take those two numbers, $5$ and $-2$ and rewrite it as $ax^2 + 5x -2x + c$. 
+We then put parentheses in: $(ax^2 + 5x) + (-2x + c)$. 
+Finally, we factor out the biggest common number (or variable) out of each of the parentheses.
 
 Let's do this with a real problem. 
 \begin{equation*}
     x^2 - x - 12
 \end{equation*}
-For $ac$, we get $1\times -12$, or $-12$. For $b$, we get $-1$. The factors of $12$ are $1, \, 2, \, 3, \, 4, \, 6, \, 12$. $-4\times 3 = -12$ and $-4+3 = -1$. So now we write 
+For $ac$, we get $1\times -12$, or $-12$. 
+For $b$, we get $-1$. 
+The factors of $12$ are $1, \, 2, \, 3, \, 4, \, 6, \, 12$. $-4\times 3 = -12$ and $-4+3 = -1$. 
+So now we write 
 \begin{equation*}
     x^2 - 4x + 3x - 12
 \end{equation*}
@@ -263,33 +281,48 @@ Now, we put in the parentheses and get
 \begin{equation*}
     (x^2-4x)+(3x-12)
 \end{equation*}
-Now for the last step, factoring. For the first parenthesis, we can take out $x$, and in the second parenthesis, we can take out $3$, so we get
+Now for the last step, factoring. 
+For the first parenthesis, we can take out $x$, and in the second parenthesis, we can take out $3$, so we get
 \begin{equation*}
     x(x-4)+3(x-4)
 \end{equation*}
-Note that if the two parenthesis' contents are not the same, then you have done something wrong. Now, we can rewrite this expression as 
+Note that if the two parenthesis' contents are not the same, then you have done something wrong. 
+Now, we can rewrite this expression as 
 \begin{equation*}
     (x+3)(x-4)
 \end{equation*}
 The equation is now factored.
 
-The other thing of note here is rationalizing the denominator or numerator. Normally, we rationalize the denominator to get a radical out of the denominator, but we can also do this for the numerator. To do this, we multiply by expression on the numerator or the denominator over itself. Let's say we have the expression $\frac{\sqrt{x}}{1}$. Then we would multiply by $\frac{\sqrt{x}}{\sqrt{x}}$ and simplify. Note that if instead we had an expression like $\frac{\sqrt{x}+1}{1}$ we would multiply by $\frac{\sqrt{x}-1}{\sqrt{x}-1}$. We switched the sign on the $1$ from $+$ to $-$. This is called taking the "conjugate" of the expression.
+The other thing of note here is rationalizing the denominator or numerator. 
+Normally, we rationalize the denominator to get a radical out of the denominator, but we can also do this for the numerator. 
+To do this, we multiply by expression on the numerator or the denominator over itself. 
+Let's say we have the expression $\frac{\sqrt{x}}{1}$. 
+Then we would multiply by $\frac{\sqrt{x}}{\sqrt{x}}$ and simplify. 
+Note that if instead we had an expression like $\frac{\sqrt{x}+1}{1}$ we would multiply by $\frac{\sqrt{x}-1}{\sqrt{x}-1}$. 
+We switched the sign on the $1$ from $+$ to $-$. This is called taking the "conjugate" of the expression.
 
-With these tools in hand, we can now start solving the second type of limit. Let us take as an example 
+With these tools in hand, we can now start solving the second type of limit. 
+Let us take as an example 
 \begin{equation*}
     \lim\limits_{x\rightarrow -3}\frac{x^2-x-12}{x+3}
 \end{equation*}
-We can clearly see that if we just plug it in, there will be a zero in the denominator. Instead, we can try employing an algebraic tool. You might recognize the quadratic on the top as the one we factored earlier. Let us then replace that expression with its factored form:
+We can clearly see that if we just plug it in, there will be a zero in the denominator. 
+Instead, we can try employing an algebraic tool. 
+You might recognize the quadratic on the top as the one we factored earlier. 
+Let us then replace that expression with its factored form:
 \begin{equation*}
     \lim\limits_{x\rightarrow -3}\frac{(x+3)(x-4)}{x+3}
 \end{equation*}
-Now, we can cancel the $x+3$ on the top and bottom of the fraction. This then leaves us with
+Now, we can cancel the $x+3$ on the top and bottom of the fraction. 
+This then leaves us with
 \begin{equation*}
     \lim\limits_{x\rightarrow -3}x-4
 \end{equation*}
 The limit is now one of our "easy" limits, so we can simply plug in $-3$. The answer is $-7$.
 
-Now we have our final type of limit, the "$\frac{\text{not zero}}{0}$" limit. This type of limit is a bit different from the other two types of limits. It requires a bit more intuition. As an example, let's say we are trying to solve the problem
+Now we have our final type of limit, the "$\frac{\text{not zero}}{0}$" limit. 
+This type of limit is a bit different from the other two types of limits. 
+It requires a bit more intuition. As an example, let's say we are trying to solve the problem
 \begin{equation*}
     \lim\limits_{x\rightarrow 0}\frac{1}{x}
 \end{equation*}
@@ -301,16 +334,32 @@ and
 \begin{equation*}
     \lim\limits_{x\rightarrow 0^-}\frac{1}{x}
 \end{equation*}
-First, let's examine the second problem. The $+$ sign means it is a right integral - that is, we are approaching zero from the left. What does that mean? Well, let's say we have a number line like the one below.
+First, let's examine the second problem. 
+The $+$ sign means it is a right integral - that is, we are approaching zero from the left. 
+What does that mean? Well, let's say we have a number line like the one below.
 
 \begin{figure}[H]
 \caption{Approaching zero}
 \includegraphics[scale=0.75]{numberline.jpg}
 \end{figure}
 
-To approach from the right means that $x$ will be represented by tiny positive numbers, like $0.00001$ and $0.0000001$. They will get closer and closer to $0$. So, what does this mean? It means the answer to this particular limit will be whatever $\frac{1}{\text{really small positive number}}$ is. So let's take some examples. If we have $\frac{1}{0.00001}$ we get $100000$. If we have something closer to zero, like $\frac{1}{0.0000001}$ we get $10000000$. In other words, we are approaching infinity. So the answer to this limit, approached from the right, is $+\infty$, or just $\infty$. Now, let's do the next one. This time, we are approaching zero from the left. Now we are dividing by small negative numbers. Try a few on a calculator and see what you get!
+To approach from the right means that $x$ will be represented by tiny positive numbers, like $0.00001$ and $0.0000001$. 
+They will get closer and closer to $0$. 
+So, what does this mean? 
+It means the answer to this particular limit will be whatever $\frac{1}{\text{really small positive number}}$ is. 
+So let's take some examples. 
+If we have $\frac{1}{0.00001}$ we get $100000$. 
+If we have something closer to zero, like $\frac{1}{0.0000001}$ we get $10000000$. 
+In other words, we are approaching infinity.
+So the answer to this limit, approached from the right, is $+\infty$, or just $\infty$. 
+Now, let's do the next one. 
+This time, we are approaching zero from the left. Now we are dividing by small negative numbers. Try a few on a calculator and see what you get!
 
-It turns out that this approaches $-\infty$. So the answer to the third limit in that list we started with is $-\infty$. Now, to solve the first limit. If we take the second two limits and their answer is the same, the first limit has a solution: the answer to the second two limits! However, the second two limits had different solutions. That means the answer to the first limit is undefined.
+It turns out that this approaches $-\infty$. 
+So the answer to the third limit in that list we started with is $-\infty$. 
+Now, to solve the first limit. 
+If we take the second two limits and their answer is the same, the first limit has a solution: the answer to the second two limits! 
+However, the second two limits had different solutions. That means the answer to the first limit is undefined.
 
 \section{Problems}
 \begin{enumerate}
@@ -323,17 +372,24 @@ It turns out that this approaches $-\infty$. So the answer to the third limit in
 
 \section{Applications}
 
-Now we get to the most interesting part of calculus: its applications. Here, we are going to focus on only a few applications, but there are many applications of calculus, across many fields, such as economics, sociology, physics, mathematics itself, chemistry, astronomy, and others. Calculus is key in many fields.
+Now we get to the most interesting part of calculus: its applications. 
+Here, we are going to focus on only a few applications, but there are many applications of calculus, across many fields, such as economics, sociology, physics, mathematics itself, chemistry, astronomy, and others. 
+Calculus is key in many fields.
 
-The main application we are going to look at is work, as defined by physics. Interestingly, there is an integral definition of work - that is, work can be defined using an integral.
+The main application we are going to look at is work, as defined by physics. 
+Interestingly, there is an integral definition of work - that is, work can be defined using an integral.
 
 \begin{equation*}
     \int^b_a f(x) \, dx
 \end{equation*}
 
-What does this mean? Well, first, $f(x)$ is a function representing force, which, as Newton's second law states, is $F = ma$ - that is, force is mass times acceleration. Second, $b - a$ should equal the displacement, or how much the object is removed. This is easier to illustrate with a few problems.
+What does this mean? 
+Well, first, $f(x)$ is a function representing force, which, as Newton's second law states, is $F = ma$ - that is, force is mass times acceleration. 
+Second, $b - a$ should equal the displacement, or how much the object is removed. 
+This is easier to illustrate with a few problems.
 
-For example, let's say we have a bowling ball, rolled with a force equal to the function $f(x) = 2x+3$ (where the resulting number is in Newtons). We want to find out how much work it takes to roll it from the start of our lane down to the end of the lane, 10 meters away.
+For example, let's say we have a bowling ball, rolled with a force equal to the function $f(x) = 2x+3$ (where the resulting number is in Newtons). 
+We want to find out how much work it takes to roll it from the start of our lane down to the end of the lane, 10 meters away.
 
 Well, here, this is easy. All we do is plug in the numbers into our formula for work! 
 
@@ -341,11 +397,25 @@ Well, here, this is easy. All we do is plug in the numbers into our formula for 
     \int^{10}_0 2x+3 \, dx
 \end{equation*}
 
-Remember that $a$ and $b$ together represent displacement. We're rolling the bowling ball from the start, $0$, to the end of the lane, $10$ meters away. So that represents $a$ and $b$ respectively. The force, $f(x)$, is simple to plug in. So now, we follow the rules for integrating. In this case, we get $2\frac{x^2}{2}+3x\mid^{10}_0$. Note that this last part, the line with the superscripts, is just a bit of notation, saying that we plug in $10$ and $0$ and subtract according to the rules of definite integrals. It just allows us to integrate and write that down. 
+Remember that $a$ and $b$ together represent displacement. 
+We're rolling the bowling ball from the start, $0$, to the end of the lane, $10$ meters away. 
+So that represents $a$ and $b$ respectively. 
+The force, $f(x)$, is simple to plug in. 
+So now, we follow the rules for integrating. 
+In this case, we get $2\frac{x^2}{2}+3x\mid^{10}_0$. 
+Note that this last part, the line with the superscripts, is just a bit of notation, saying that we plug in $10$ and $0$ and subtract according to the rules of definite integrals. 
+It just allows us to integrate and write that down. 
 
-So now that we have this, we plug it in as we would for normal definite integrals, and so we get $(2\cdot\frac{10^2}{2}+3\cdot 10) - (2\cdot\frac{0^2}{2}+3\cdot 0)$ and then we simplify. The whole second half comes to zero, so we now have $2\cdot\frac{10^2}{2}+3\cdot 10$. Then, we have $2\cdot \frac{100}{2}+ 30$ or $2\cdot 50 + 30$ or $130$. Now we look at units. We have meters and newtons, so now when we multiply those two, we have joules (a unit of work). So our answer is $130$ joules. Note that it is very important to keep track of your units. If you don't know a unit of force, work, or distance, look it up! Think logically.
+So now that we have this, we plug it in as we would for normal definite integrals, and so we get $(2\cdot\frac{10^2}{2}+3\cdot 10) - (2\cdot\frac{0^2}{2}+3\cdot 0)$ and then we simplify. 
+The whole second half comes to zero, so we now have $2\cdot\frac{10^2}{2}+3\cdot 10$. 
+Then, we have $2\cdot \frac{100}{2}+ 30$ or $2\cdot 50 + 30$ or $130$. 
+Now we look at units. 
+We have meters and newtons, so now when we multiply those two, we have joules (a unit of work). 
+So our answer is $130$ joules. 
+Note that it is very important to keep track of your units. If you don't know a unit of force, work, or distance, look it up! Think logically.
 
-A quick note on Hooke's Law: when considering the work required to stretch a spring, you can assume that the force ($f(x)$) needed to stretch a spring a distance $x$ beyond its natural length is proportional to $x$. In other words, we have $f(x) = cx$ where $x$ is the distance the spring is stretched and $c$ is some constant.
+A quick note on Hooke's Law: when considering the work required to stretch a spring, you can assume that the force ($f(x)$) needed to stretch a spring a distance $x$ beyond its natural length is proportional to $x$. 
+In other words, we have $f(x) = cx$ where $x$ is the distance the spring is stretched and $c$ is some constant.
 
 \section{Problems}
 For the second problem, the spring can be assumed to obey Hooke's Law.
@@ -357,17 +427,13 @@ For the second problem, the spring can be assumed to obey Hooke's Law.
 
 \section{What Next?}
 
-What we've been looking at here is called single variable calculus -
-which, clearly enough, involves integrals and derivatives with only
-one variable. However, there is such a thing as multivariable
-calculus, adding more variables, and even more usefulness to an
-already incredibly useful tool. This is a good next thing to study
-after single-variable calculus. There is also a form of calculus
-called vector calculus (to study this, it is a good idea to know
-linear algebra) which is useful to know. Finally, there is the field
-of differential equations, from simpler, "ordinary" differential
-equations to more complex partial differential equations. All of these
-fields are incredibly interesting and well worth studying.
+What we've been looking at here is called single variable calculus - which, clearly enough, involves integrals and derivatives with only one variable. 
+However, there is such a thing as multivariable calculus, adding more variables, and even more usefulness to an already incredibly useful tool. 
+This is a good next thing to study after single-variable calculus. 
+There is also a form of calculus called vector calculus (to study this, it is a good idea to know
+linear algebra) which is useful to know. 
+Finally, there is the field of differential equations, from simpler, "ordinary" differential equations to more complex partial differential equations. 
+All of these fields are incredibly interesting and well worth studying.
 
 \section{Resources}
 
@@ -398,8 +464,10 @@ A few of the problems have been taken from Apostol's Calculus, Volume 1.
 
 Integrals: 
 \begin{enumerate}
-\item $\int x \, dx = \frac{x^2}{2}+c$ For this one, all you have to do is use the table given. Because it is an indefinite integral, don't forget to add $c$!
-\item $\int x^2 - 5 \,dx = \int x^2 \, dx - \int 5 \, dx = \frac{x^3}{3}-5x + c$ Remember that the integral is distributive over addition and subtraction. Also, remember that there is only one $c$ added to the solution of any indefinite integral.
+\item $\int x \, dx = \frac{x^2}{2}+c$ For this one, all you have to do is use the table given. 
+Because it is an indefinite integral, don't forget to add $c$!
+\item $\int x^2 - 5 \,dx = \int x^2 \, dx - \int 5 \, dx = \frac{x^3}{3}-5x + c$ Remember that the integral is distributive over addition and subtraction. 
+Also, remember that there is only one $c$ added to the solution of any indefinite integral.
 \item $\int^5_0 x^2 \, dx = \frac{x^3}{3}\mid^5_0 = \frac{5^3}{3}-\frac{0^3}{3}=\frac{5^3}{3}=\frac{125}{3}$ Remember that $\mid^5_0$ is simply a piece of notation that allows us to keep track of what we are integrating over as we integrate.
 \item $\int^5_0 x^2 \, dx = \frac{x^3}{3}\mid^5_0 = \frac{5^3}{3}-\frac{3^3}{3} = \frac{125}{3} - \frac{27}{3} = \frac{125}{3}-9$ Note that in this case (and the previous problem) you could simplify a bit further, but this is as far as we'll go.
 \item $\int^5_3 x^2 + 1\, dx = \int^5_3 x^2 \, dx + \int^5_3 1 \, dx = \frac{x^3}{3}+x\mid^5_3 = \frac{5^3}{3}+5 - \frac{3^3}{3}+3 = \frac{125}{3}+5 - \frac{27}{3}+3 = \frac{125}{3}+5 - 12 = \frac{125}{3}-7$
@@ -425,14 +493,19 @@ Limits:
 \item \begin{align*}
     & \lim\limits_{x\rightarrow 9}\frac{\sqrt{x}-3}{x-9}=  \lim\limits_{x\rightarrow 9}\left(\frac{\sqrt{x}-3}{x-9}\right) \left(\frac{\sqrt{x}+3}{\sqrt{x+3}}\right) = \\  &\lim\limits_{x\rightarrow 9} \frac{x+3\sqrt{x}-3\sqrt{x}-9}{(x-9) (\sqrt{x}+3)}=\lim\limits_{x\rightarrow 9}\frac{x-9}{(x-9)(\sqrt{x}+3)} = \\ & \lim\limits_{x\rightarrow 9}\frac{1}{\sqrt{x}+3} =\frac{1}{\sqrt{9}+3}=\frac{1}{6}
 \end{align*}
-Here, again, we must do some algebraic manipulation. We rationalize the denominator by multiplying by the conjugate over itself (we must do that, so if we divide it equals one) and then the top and bottom cancel, and so we are left with something we can simply plug in. Don't be tricked here - this did not convert into a "$\frac{1}{0}$" limit so we don't need to do anything special.
+Here, again, we must do some algebraic manipulation. 
+We rationalize the denominator by multiplying by the conjugate over itself (we must do that, so if we divide it equals one) and then the top and bottom cancel, and so we are left with something we can simply plug in. 
+Don't be tricked here - this did not convert into a "$\frac{1}{0}$" limit so we don't need to do anything special.
 \item \begin{align*}
     &\lim\limits_{x\rightarrow 0} \frac{1}{x^2}\\
     &\lim\limits_{x\rightarrow 0^+} \frac{1}{x^2} = +\infty\\
     &\lim\limits_{x\rightarrow 0^-} \frac{1}{x^2} = +\infty\\
     &\lim\limits_{x\rightarrow 0} \frac{1}{x^2} = +\infty
 \end{align*}
-Remember how for $\frac{1}{0}$ limits we must do the right and left limit, and check if their result is equal. To do that, we look at approaching $0$ first from the right (so very small positive numbers) and then square them, making them even smaller, and then we divide one by these tiny numbers, giving a huger and huger output as we approach zero. Therefore, this gives positive infinity. Now, when approaching from the left, you might expect negative infinity to be the answer, but we are squaring $x$, meaning that this turns into tiny positive numbers, so again, we are left with positive infinity.
+Remember how for $\frac{1}{0}$ limits we must do the right and left limit, and check if their result is equal. 
+To do that, we look at approaching $0$ first from the right (so very small positive numbers) and then square them, making them even smaller, and then we divide one by these tiny numbers, giving a huger and huger output as we approach zero. 
+Therefore, this gives positive infinity. 
+Now, when approaching from the left, you might expect negative infinity to be the answer, but we are squaring $x$, meaning that this turns into tiny positive numbers, so again, we are left with positive infinity.
 \item \begin{equation*}
     \lim\limits_{x\rightarrow 1} \frac{\sqrt{x}-1}{x-1} = \lim\limits_{x\rightarrow 1} \frac{\sqrt{x}-1}{x-1} \cdot \frac{\sqrt{x}+1}{\sqrt{x}+1} = \lim\limits_{x\rightarrow 1} \frac{x-1}{(x-1)(\sqrt{x}+1)}=\lim\limits_{x\rightarrow 1} \frac{1}{\sqrt{x}+1} = \frac{1}{2}
 \end{equation*}
@@ -443,7 +516,14 @@ Applications:
 \begin{enumerate}
 \item $f(x) = 5x^2 \; W = \int^b_a f(x) \, dx \; \int^127_0 5x^2 \, dx = 5\cdot \frac{x^3}{3}\mid^{127}_0 = \frac{127^3}{3}-\frac{0^3}{3} = \frac{127^3}{3} = \frac{2048383}{3} \,\text{foot-pounds}$
 Remember here that $W$, or work, is equivalent to the integral $\int^b_a f(x) \, dx$. From there, we just plug in the force equation and go.
-\item First, remember that according to Hooke's Law, force is proportional to $x$. So here we get $f(x) = 10x$. Then, we consider displacement - well, we're stretching the spring one foot, so $b=12$ and $a = 0$. Remember here that we're using inches! Now we plug it in: $\int^{12}_0 10x \, dx = 10\cdot\frac{x^2}{2}\mid^{12}_0$. Now we know that the second part will all come out to zero, so we are left with $10\cdot\frac{12^2}{2}$ or $10\cdot\frac{144}{2} = 10\cdot 72 = 720$ - but what are our units? Well, we are multiplying inches by pounds, so inch-pounds. But we can simplify to foot-pounds by dividing our answer by $12$. This gives us $60$ foot-pounds.
+\item First, remember that according to Hooke's Law, force is proportional to $x$. 
+So here we get $f(x) = 10x$. 
+Then, we consider displacement - well, we're stretching the spring one foot, so $b=12$ and $a = 0$. 
+Remember here that we're using inches! 
+Now we plug it in: $\int^{12}_0 10x \, dx = 10\cdot\frac{x^2}{2}\mid^{12}_0$. 
+Now we know that the second part will all come out to zero, so we are left with $10\cdot\frac{12^2}{2}$ or $10\cdot\frac{144}{2} = 10\cdot 72 = 720$ - but what are our units? 
+Well, we are multiplying inches by pounds, so inch-pounds. 
+But we can simplify to foot-pounds by dividing our answer by $12$. This gives us $60$ foot-pounds.
 \end{enumerate}
 
 \end{document}
