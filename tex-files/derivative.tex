@@ -41,7 +41,8 @@ Derivatives and integrals are inverses of each other.
 That is, they undo each other, like division undoes multiplication and subtraction undoes addition. 
 So, because when going from an integral back to a derivative there is some uncertainty which graph you are looking at (parallel lines, for instance, have the same slope, but they have different "heights"), you have to add the $c$ when solving an indefinite integral.
 
-Below is a table with some solutions to various derivatives.
+Below is a table with some solutions to various derivatives. Note that $c$ is a constant and $n$ is non-zero. Note that the $'$ symbol is pronounced prime, and is another way to write that we are taking the derivative. 
+
 
 \begin{tabular}{c|c}
     $f(x)$ & $\frac{df}{dx} = f'$\\
@@ -67,7 +68,6 @@ Let's start with the chain rule.
 If we have a function within a function in a derivative, like $\sin(\cos(x))$, we can assign a name to each function, like $g(x) = \cos(x)$ and $h(x) = \sin(x)$, and then follow this simple rule: $h'(g(x)) \cdot g'(x)$. 
 So what does this mean? 
 Well, let's plug it in. 
-Remember that the $'$ symbol is pronounced prime, and is another way to write that we are taking the derivative. 
 Plugging this in gives $\sin'(\cos(x)) \cdot \cos'(x)$. 
 So the derivative of $\sin$ is $\cos$, so we write $\cos(\cos(x))$ for the first part, and the derivative of $\cos$ is $-\sin$, so we write $-\sin(x)$ for the second part. 
 So now we have $\cos(\cos(x)) \cdot -\sin(x)$. 
