@@ -7,6 +7,7 @@
 \MakeOuterQuote{"}
 \usepackage[pdfpagemode=useNone,pdfstartview=FitH,colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 \usepackage[all]{hypcap}
+\usepackage[title]{appendix}
 
 \title{Single-Variable Calculus}
 \author{physicsnerd}
@@ -82,8 +83,10 @@ Solve the following integrals:
 
 \bibliographystyle{plain}
 \bibliography{resources}
-\section{Appendix One}
+\addcontentsline{toc}{section}{References}
+\begin{appendices}
+\section{Circles with Calculus}
 \input{appendix1.tex}
-
+\end{appendices}
 \end{document}
 
