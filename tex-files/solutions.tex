@@ -30,6 +30,16 @@ Now, when approaching from the left, you might expect negative infinity to be th
 Here we are rationalizing the numerator again. Again, don't be tricked - it does not turn into a $\frac{1}{0}$ limit.
 \end{enumerate}
 
+Derivatives:
+\begin{enumerate}
+\item $\frac{d}{dx} \, 5x = 5$ Here, we simply follow the rules in the table.
+\item $\frac{d}{dx} \, 6x^2 - 9x + 4 = 12x - 9$ Remember that constants simply disappear, and the exponent rules outlined in the table.
+\item $\frac{d}{dx} \, 2t^4 - 13t = 8t^3 - 13$
+\item $\frac{d}{dx}\, x^{-1} = -x^{-2}$ 
+\item $\frac{d}{dx}\, \sqrt{x} = \frac{d}{dx}\, x^{\frac{1}{2}} = \frac{1}{2}x^{-\frac{1}{2}}$ This one requires knowing how roots translate into exponents, but after that, it isn't so bad.
+\item Our function is $f(t) = t^n$, so we plug this in and carry on. We have $\lim\limits_{\Delta t\rightarrow 0}\frac{(t+\Delta t)^n-t^n}{\Delta t}$. Here we can use the binomial theorem (this problem is a real challenge, so don't feel bad if you felt absolutely stuck here) which basically says that $(a+b)^n = a^n+na^{n-1}b+\frac{n(n-1)}{2}a^{n-2}b^2+\frac{n(n-1)(n-2)}{3}a^{n-3}b^3+...+b^n$. For our purposes, we only need the first two terms, because all the others shrink to zero due to the limit (you can check this yourself with a few examples) so you get $\lim\limits_{\Delta t\rightarrow 0}\frac{t^n+nt^{n-1}\Delta t-t^n}{\Delta t}=\lim\limits_{\Delta t\rightarrow 0}\frac{nt^{n-1}\Delta t}{\Delta t}=\lim\limits_{\Delta t\rightarrow 0}nt^{n-1}$ and here you'll notice that the limit doesn't apply anywhere, so you just have $nt^{n-1}$ - which is of course the exponent rule.
+\end{enumerate}
+
 Integrals: 
 \begin{enumerate}
 \item $\int x \, dx = \frac{x^2}{2}+c$ For this one, all you have to do is use the table given. 
@@ -39,16 +49,6 @@ Also, remember that there is only one $c$ added to the solution of any indefinit
 \item $\int^5_0 x^2 \, dx = \frac{x^3}{3}\mid^5_0 = \frac{5^3}{3}-\frac{0^3}{3}=\frac{5^3}{3}=\frac{125}{3}$ Remember that $\mid^5_0$ is simply a piece of notation that allows us to keep track of what we are integrating over as we integrate.
 \item $\int^5_0 x^2 \, dx = \frac{x^3}{3}\mid^5_0 = \frac{5^3}{3}-\frac{3^3}{3} = \frac{125}{3} - \frac{27}{3} = \frac{125}{3}-9$ Note that in this case (and the previous problem) you could simplify a bit further, but this is as far as we'll go.
 \item $\int^5_3 x^2 + 1\, dx = \int^5_3 x^2 \, dx + \int^5_3 1 \, dx = \frac{x^3}{3}+x\mid^5_3 = \frac{5^3}{3}+5 - \frac{3^3}{3}+3 = \frac{125}{3}+5 - \frac{27}{3}+3 = \frac{125}{3}+5 - 12 = \frac{125}{3}-7$
-\end{enumerate}
-
-Derivatives:
-\begin{enumerate}
-\item $\frac{d}{dx} \, 5x = 5$ Here, we simply follow the rules in the table.
-\item $\frac{d}{dx} \, 6x^2 - 9x + 4 = 12x - 9$ Remember that constants simply disappear, and the exponent rules outlined in the table.
-\item $\frac{d}{dx} \, 2t^4 - 13t = 8t^3 - 13$
-\item $\frac{d}{dx}\, x^{-1} = -x^{-2}$ 
-\item $\frac{d}{dx}\, \sqrt{x} = \frac{d}{dx}\, x^{\frac{1}{2}} = \frac{1}{2}x^{-\frac{1}{2}}$ This one requires knowing how roots translate into exponents, but after that, it isn't so bad.
-\item Our function is $f(t) = t^n$, so we plug this in and carry on. We have $\lim\limits_{\Delta t\rightarrow 0}\frac{(t+\Delta t)^n-t^n}{\Delta t}$. Here we can use the binomial theorem (this problem is a real challenge, so don't feel bad if you felt absolutely stuck here) which basically says that $(a+b)^n = a^n+na^{n-1}b+\frac{n(n-1)}{2}a^{n-2}b^2+\frac{n(n-1)(n-2)}{3}a^{n-3}b^3+...+b^n$. For our purposes, we only need the first two terms, because all the others shrink to zero due to the limit (you can check this yourself with a few examples) so you get $\lim\limits_{\Delta t\rightarrow 0}\frac{t^n+nt^{n-1}\Delta t-t^n}{\Delta t}=\lim\limits_{\Delta t\rightarrow 0}\frac{nt^{n-1}\Delta t}{\Delta t}=\lim\limits_{\Delta t\rightarrow 0}nt^{n-1}$ and here you'll notice that the limit doesn't apply anywhere, so you just have $nt^{n-1}$ - which is of course the exponent rule.
 \end{enumerate}
 
 Applications:
