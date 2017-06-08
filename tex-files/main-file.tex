@@ -1,4 +1,4 @@
-\documentclass[12pt]{article}
+\documentclass{book}
 \usepackage{graphicx}
 \usepackage{amsmath}
 \usepackage{float}
@@ -16,7 +16,7 @@
 \maketitle
 \tableofcontents
 
-\section{Overview}
+\chapter{Introduction}
 Calculus is the study of change. 
 There are two main branches to calculus: differential and integral calculus. 
 Differential calculus studies the slopes of lines, or the rate of change, using the derivative. 
@@ -26,15 +26,15 @@ Here, we will go over how to solve problems in the main fields of calculus, some
 This book (booklet might be more appropriate) does not assume significant background knowledge - while it would be nice for the reader to have an understanding of algebra, and perhaps to have even been through trigonometry in their studies, this book requires none but the most basic algebra - factoring quadratics, or simplifying radicals, or other more advanced algebra topics are explained as they come up in the text. 
 If you do have any questions, many resources can be found on the internet, or you can create an issue at this book's github page: https://github.com/physicsnerd/calculus-notes.
 
-\section{Terms to Know}
+\chapter{Terms to Know}
 
 \input{termstoknow.tex}
 
-\section{Limits}
+\part{Limits}
 
 \input{limits.tex}
 
-\subsection{Problems}
+\chapter{Problems}
 \begin{enumerate}
     \item $$\lim\limits_{x\rightarrow 3} 2x+5$$
     \item $$\lim\limits_{x\rightarrow 4} \frac{x^2-16}{x-4}$$
@@ -43,11 +43,11 @@ If you do have any questions, many resources can be found on the internet, or yo
     \item $$\lim\limits_{x\rightarrow 1} \frac{\sqrt{x}-1}{x-1}$$
 \end{enumerate}
 
-\section{Integral}
+\part{Integral}
 
 \input{integral.tex}
 
-\subsection{Problems}
+\chapter{Problems}
 Solve the following integrals:
 
 \begin{enumerate}
@@ -58,11 +58,11 @@ Solve the following integrals:
     \item $\int^5_3 x^2 + 1 \, dx$
 \end{enumerate}
 
-\section{Differential}
+\part{Differential}
 
 \input{derivative.tex}
 
-\subsection{Problems}
+\chapter{Problems}
 \begin{enumerate}
     \item $5x$
     \item $6x^3 - 9x + 4$
@@ -72,29 +72,24 @@ Solve the following integrals:
     \item Derive the exponent rule using the formal definition of a derivative (the rule being that if you have a function $t^n$, the derivative will be $(nt^{n-1}$).
 \end{enumerate}
 
-\section{Applications}
+\part{Applications}
 
 \input{applications.tex}
 
-\medskip
-
+\begin{appendices}
+\section{Circles with Calculus}
+\subsection{Formal Proof}
+It is given that there is a circle, with a radius $r$, and the circumference of a circle is $2\pi r$. If we think of the circle as a series of concentric rings, we can then integrate $2\pi r$ over the interval $0$ to $r$, or from the center of the circle to the outer rim of the circle. So we now have the integral $\int^r_0 2\pi r\, dr$. We then may simplify by the definition of an integral to $\frac{2\pi r^2}{2}\mid^r_0$, and simplify yet further to $\frac{2\pi r^2}{2}-\frac{2\pi 0^2}{2}$, which then becomes $\frac{2\pi r^2}{2}$ or $\pi r^2$. Therefore, we have shown that the area of a circle with radius $r$ is $\pi r^2$.
+\subsection{Intuition}
+\input{appendix1.tex}
 \section{Worked Solutions}
 
 \input{solutions.tex}
-
+\end{appendices}
 \input{nocites.tex}
 
 \bibliographystyle{plain}
 \bibliography{resources}
 \addcontentsline{toc}{section}{References}
-\begin{appendices}
-\section{Circles with Calculus}
-\subsection{Formal Proofs}
-\subsubsection{Area of a circle}
-It is given that there is a circle, with a radius $r$, and the circumference of a circle is $2\pi r$. If we think of the circle as a series of concentric rings, we can then integrate $2\pi r$ over the interval $0$ to $r$, or from the center of the circle to the outer rim of the circle. So we now have the integral $\int^r_0 2\pi r\, dr$. We then may simplify by the definition of an integral to $\frac{2\pi r^2}{2}\mid^r_0$, and simplify yet further to $\frac{2\pi r^2}{2}-\frac{2\pi 0^2}{2}$, which then becomes $\frac{2\pi r^2}{2}$ or $\pi r^2$. Therefore, we have shown that the area of a circle with radius $r$ is $\pi r^2$.
-\subsubsection{Circumference of a circle}
-\subsection{Intuition}
-\input{appendix1.tex}
-\end{appendices}
 \end{document}
 
