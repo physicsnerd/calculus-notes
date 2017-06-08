@@ -1,3 +1,4 @@
+\subsection{Intuition Behind Derivatives}
 Differential calculus is all about finding the slope of a curve. 
 First, let's consider a normal case, finding the slope of a straight line. 
 We take in two points, and find the change in x and change in y ($\Delta x$ and $\Delta y$). 
@@ -36,11 +37,12 @@ This is what is happening "behind the scenes" when we calculate derivatives.
 However, it is important to note that, going back to the example of the cannonball, where the cannonball started does not affect the slope. 
 If the whole graph is shifted up or down, the slope stays the same (as long as the proportions are kept the same). 
 This, it turns out, is why we need to add the $c$ in a indefinite integral. 
-
+\subsection{Derivatives and Integrals}
 Derivatives and integrals are inverses of each other. 
 That is, they undo each other, like division undoes multiplication and subtraction undoes addition. 
+(This is called the "fundamental theorem of calculus".)
 So, because when going from an integral back to a derivative there is some uncertainty which graph you are looking at (parallel lines, for instance, have the same slope, but they have different "heights"), you have to add the $c$ when solving an indefinite integral.
-
+\subsection{Basic Derivative Rules}
 Below is a table with some solutions to various derivatives. Note that $c$ is a constant and $n$ is non-zero. Note that the $'$ symbol is pronounced prime, and is another way to write that we are taking the derivative. 
 
 
@@ -86,8 +88,8 @@ Let's use the example of $g(x) = \sin(x)$ and $h(x) = \cos(x)$.
 We plug it all in to get $\frac{\sin'(x)\cdot\cos(x) -\cos'(x)\cdot\sin(x)}{\cos^2(x)}$
 which simplifies to $\frac{\cos(x)\cdot\cos(x)--\sin(x)\cdot\sin(x)}{\cos^2(x)} = \frac{\cos^2(x)+sin^2(x)}{\cos^2(x)} = \sin^2(x)$. 
 So therefore, $\sin^2(x)$ is our derivative.
-
-Now, let's say you forget this rule, or come across something you can't use these rules on. In this case, you can use the formal definition of a derivative. When looking at this definition, remember that $\Delta$ means "change in" whatever variable comes afterwards (i.e., $\Delta x$ means the change in x). Given a function $f(t)$, the derivative of $f(t)$ ($\frac{df(t)}{dt}$) is \begin{equation}
+\subsection{Formal Definition of a Derivative}
+Now, let's say you forget these rules, or come across something you can't use these rules on. In this case, you can use the formal definition of a derivative. When looking at this definition, remember that $\Delta$ means "change in" whatever variable comes afterwards (i.e., $\Delta x$ means the change in x). Given a function $f(t)$, the derivative of $f(t)$ ($\frac{df(t)}{dt}$) is \begin{equation}
     \lim\limits_{\Delta t\rightarrow 0}\frac{\Delta f}{\Delta t} = \lim\limits_{\Delta t\rightarrow 0}\frac{f(t+\Delta t)-f(t)}{\Delta t}
 \end{equation}
 Let's try using this on a derivative - say, the derivative of $f(t)$ where $f(t) = t^2$. We have to solve $\lim\limits_{\Delta t\rightarrow 0}\frac{f(t+\Delta t)-f(t)}{\Delta t}$. Remember that the rule is that the input to $f$ must be squared, so for the first term, we need to square $t+\Delta t$ - $(t+\Delta t)(t+\Delta t) = t^2+t\Delta t+t\Delta t + \Delta t^2 = t^2+2t\Delta t+\Delta t^2$. That's the first term on top of the fraction. The second term is just $f(t)$ - which we've been told equals $t^2$. Since we subtract this from the first term, the two cancel, leaving $\frac{2t\Delta t+\Delta t^2}{\Delta t}$. We then divide, getting $2t+\Delta t$. Now we have to apply the limit in front. Remember that if there will be no mathematically impossible results, we can just plug in the limit - i.e., in this case, $2t+0$ or just $2t$, which is our result. We can of course check this using our earlier exponent rule (which we can actually derive; see exercise six and solution), and $2t$ is still the result.
