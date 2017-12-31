@@ -45,20 +45,7 @@ If you do have any questions, many resources can be found on the internet, or yo
     \item $$\lim\limits_{x\rightarrow 1} \frac{\sqrt{x}-1}{x-1}$$
 \end{enumerate}
 
-\part{Integral}
 
-\input{integral.tex}
-
-\chapter{Problems}
-Solve the following integrals:
-
-\begin{enumerate}
-    \item $\int x \, dx$
-    \item $\int x^2-5 \, dx$
-    \item $\int^5_0 x^2 \, dx$
-    \item $\int^5_3 x^2 \, dx$
-    \item $\int^5_3 x^2 + 1 \, dx$
-\end{enumerate}
 
 \part{Differential}
 
@@ -73,7 +60,20 @@ Solve the following integrals:
     \item $\sqrt{x}$
     \item Derive the exponent rule using the formal definition of a derivative (the rule being that if you have a function $t^n$, the derivative will be $(nt^{n-1}$).
 \end{enumerate}
+\part{Integral}
 
+\input{integral.tex}
+
+\chapter{Problems}
+Solve the following integrals:
+
+\begin{enumerate}
+    \item $\int x \, dx$
+    \item $\int x^2-5 \, dx$
+    \item $\int^5_0 x^2 \, dx$
+    \item $\int^5_3 x^2 \, dx$
+    \item $\int^5_3 x^2 + 1 \, dx$
+\end{enumerate}
 \part{Applications}
 
 \input{applications.tex}
@@ -81,11 +81,11 @@ Solve the following integrals:
 \part{Appendices}
 \appendix
 \chapter{Circles with Calculus}
-\section*{Formal Proof}
 It is given that there is a circle, with a radius $r$, and the circumference of a circle is $2\pi r$. If we think of the circle as a series of concentric rings, we can then integrate $2\pi r$ over the interval $0$ to $r$, or from the center of the circle to the outer rim of the circle. So we now have the integral $\int^r_0 2\pi r\, dr$. We then may simplify by the definition of an integral to $\frac{2\pi r^2}{2}\mid^r_0$, and simplify yet further to $\frac{2\pi r^2}{2}-\frac{2\pi 0^2}{2}$, which then becomes $\frac{2\pi r^2}{2}$ or $\pi r^2$. Therefore, we have shown that the area of a circle with radius $r$ is $\pi r^2$.
-\section*{Intuition}
-\input{appendix1.tex}
+
 \chapter{Worked Solutions}
 
 \input{solutions.tex}
+
+\chapter{Resources}
 \end{document}

@@ -61,5 +61,26 @@ We can also factor out constants; for example, given $\int 2x + 3x \, dx$, we ca
 
 Also remember that you can simplify within a problem; i.e., given $x(x^2 + x^3)$ you can then multiply and get $x^3 + x^4$. 
 Finally, there is a helpful rule for integrals - the product rule. 
-If you have a function $v(x)$ and a function $u(x)$, and you wish to find the derivative of $u(x)\cdot v(x)$, you can follow the rule $u\cdot v - \int v\frac{du}{dx}\, dx$. 
+If you have a function $v(x)$ and a function $u(x)$, and you wish to find the derivative of $u(x)\cdot v(x)$, you can follow the rule $u\cdot v - \int v\frac{du}{dx}\, dx$.
+\chapter{Derivatives and Integrals}
+Derivatives and integrals are inverses of each other. 
+That is, they undo each other, like division undoes multiplication and subtraction undoes addition. 
+(This is called the "fundamental theorem of calculus".)
+So, because when going from an integral back to a derivative there is some uncertainty which graph you are looking at (parallel lines, for instance, have the same slope, but they have different "heights"), you have to add the $c$ when solving an indefinite integral. 
 \chapter{Formal Definition of an Integral}
+\section{Summations}
+A summation is a simple method of notation that shortens long repetitive addition operations. Let's look at an example:
+
+\begin{equation}
+\sum\limits_{n=0}^{n=5} 2n
+\end{equation}
+
+Here, the expression $n=0$ under the summation symbol means that to start the sum, we plug in $0$ for $n$. The expression $n=5$ on top means we continue until we have plugged in $5$ for $n$. Expanded, this summation means
+
+\begin{equation}
+2\times 0+2\times 1+2\times 2+2\times 3+2\times 4+2\times 5
+\end{equation}
+
+which means the answer is $30$. Think back to the section on the intuition behind integrals for why we need this. We're really summing up a bunch of small rectangles. 
+\section{Formal definition of indefinite integrals}
+\section{Formal definition of definite integrals}
