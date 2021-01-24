@@ -1,0 +1,149 @@
+\subsection{Introduction}
+
+A standard calculus textbook has a whole chapter on applications of derivatives, so that's what this is. There's a few examples of why these applications are important and interesting throughout.
+
+\subsection{Extrema, What Graphs Look Like}
+
+The original definition of a derivative has to do with finding the slope of a curve, so let's think about what curves look like.
+
+You'll remember in algebra a lot of time was spent finding intercepts, memorizing the shapes of parent functions, and generally learning how to sketch a graph by hand without Wolfram Alpha. You'll be pleased to note that derivatives make this much easier, and also help us figure out some interesting points that \textit{do} tend to have real life applications: extrema (extremes).
+
+A graph has maximum points and minimum points. Think of a ball on a graph - it'll roll down to minimum points, and maximum points are where it can't get up any higher. You'll also note that some minimum points are lower than others - a ball can roll down to both, but it might end up lower at some minimums than others. This is why we call some maximums and minimums \textit{local} - that is, if we zoom in they seem pretty tall - like how a building in your local neighborhood might be pretty big - but if we zoom out, that building is probably nowhere near as big as the Burj Khalifa, just like the local minimums/maximums aren't as big/small as the overall maximum/minimum.
+
+What's also very interesting at these maximums and minimums is that they have a special property: the slope is zero. To see this, take a minimum: the slope can't be negative; that would mean it's still decreasing and you could reach yet greater depths before your ball rolled to a stop. It couldn't be positive; that would mean your ball is heading out of the minimum. It must be zero - neutral - your ball rolling nowhere.
+
+\textbf{What this means is we can find points where the derivative is zero and those will be our extrema.} Furthermore, we know that spots where there is a positive derivative, the graph has a positive slope, and is therefore increasing in value, and vice versa for negative slope. (If at any point a statement about derivatives confuses you, substitute 'derivative' for 'slope,' graph the statement and see if it makes sense.)
+
+\subsubsection{Let's Calculate This}
+
+Alright, so we know that extrema points have a slope of zero, and we know that if the derivative is positive on an interval, the slope is positive - so we can see from this whether the extrema are maximums or minimums. For instance, let's say we have the function $f(x) = x^2+3x+2$.
+
+First, we take the derivative and set it equal to zero: $f'(x) = 2x + 3 = 0$. If we solve this equation, we get that $x = -\frac{3}{2}$. At this point, we have a potential maximum or minimum point, but we have to check that the graph actually "changes directions" - which we can do by picking a point to the left of $x=-\frac{3}{2}$ and a point to the right and checking if the derivative is positive or negative at each:
+
+\begin{center}
+    \begin{tabular}{c|c}
+        $x<-\frac{3}{2}$ & $x>-\frac{3}{2}$ \\
+         \hline
+        E.g., $f'(-2) = -1$, so $-$ & E.g., $f'(0) = 3$, so $+$ 
+    \end{tabular}
+\end{center}
+
+We can see that there is definitely a 'direction change' in the graph, and furthermore that the graph goes from sloping downward to sloping upward, meaning that this is a minimum - it did not go further down, but turned upward. The ball would stop at the bottom here. We can then find the full point by plugging our $x$ value back into the original function (we're not looking for the slope at that point, but where precisely it's at): $f(-\frac{3}{2}) = -\frac{1}{4}$, so we know the minimum is at $(-\frac{3}{2}, -\frac{1}{4})$. Feel free to graph to double check!
+
+This is the basic principle of this sort of problem, but generally there are more maxima/minima, and the function to take the derivative of is more complex.
+
+\subsubsection{Why We Care}
+
+In many, many situations, extrema are interesting. We often want to optimize for extrema (see the next subsection for details on how to do this) - e.g., the maximum amount of area a fence contains given some amount of fencing material, or the minimum amount of expense given some amount of food needed to be obtained. We're also often interested in the maximums and minimums just for themselves - for instance, in literature (ha. I take back what I said in the introduction) Kurt Vonnegut once said there are six basic story plot arcs. Researchers then plugged a corpus of works into a machine learning model and graphed emotional highs and lows - emotional extrema - to find out if this is true (it is; the paper can be read at https://arxiv.org/pdf/1606.07772.pdf). They were fundamentally interested in how authors manipulate the emotional tone of a text between maximums (joy, happiness) and minimums (sadness, anger) and thereby produce commonalities in plot.
+
+\subsubsection{Optimization Problems}
+
+One specific application, as mentioned earlier, is optimization. For instance, imagine you are an ornithologist studying the cedar waxwing, and you want to know which of several colonies is doing the best. One way to measure how well a colony is doing is how many juveniles survive to adulthood. Of course, it is useful to have a maximum to compare to - with the maximum reasonable density of nests, how close are these colonies getting?
+
+So you, the expert ornithologist, collect data, and find that considering food limitations, carrying capacity, all that jazz, that if $F$ is the number of young fledglings that survive to adulthood per square meter and $D$ is the density of the nests in nests per square meter, the relationship can be approximated by $F = 4D + 2D^2 - 2D^3$. With this equation, you can calculate a maximum for density and fledgling survival to compare your data for each colony to.
+
+This is still just a problem of finding the maximum/minimum, but buried in a lot of words. We know we're trying to find the maximum of $F(D)$, so let's begin by taking the derivative and setting it to zero: $F'(D) = 4 + 4D - 6D^2 = 0$. This is just a quadratic; using a calculator we find that $D = -.55, 1.22$. Looking at this, we can just tell that negative density makes no sense, so we'll take that $1.22$ and plug it into $F(D)$, where we find that $F(1.22) = 4.23$, so a reasonable maximum to compare to as you collect your data for each colony would be $4.23$ birds surviving to adulthood per square meter. (Example stolen and streamlined from Parkhurst's \textit{Intro to Applied Mathematics For Environmental Scientists}.)
+
+\subsection{Concavity: Next Level What Graphs Look Like}
+\subsubsection{Second Derivatives, Notation}
+
+It turns out you can take derivatives multiple times. For instance, take the function $f(x) = x^3 + x^2 + x + 1$ - $f'(x) = 3x^2 + 2x + 1$ as per the power and addition rules, but we can do this again, treating $f'(x)$ like we would any other function, getting $f''(x) = 6x + 2$ - and again, to get $f'''(x) = 6$, and again to get $f''''(x) = 0$...and again, and again, and again as many times as we'd like. Successive derivatives can be noted by adding an extra apostrophe or by writing $\frac{d^n x}{dx^n}$. There is also the particular case of physics where derivatives are taken with respect to time a lot, and in which case dots on top of the function are used - e.g. $\dot x, \ddot x, \dddot x$, etc.
+
+\subsubsection{Concavity and Points of Inflection}
+
+If first derivatives can be intuitively understood as slope, second derivatives can be intuitively understood as the slope of the slope. In other words, the second derivative asks whether the graph is getting steeper or shallower - how steep are the walls the ball is rolling up or down? Is rolling it uphill practically throwing the ball straight up?
+
+This idea is called concavity, and there are two types: concave up (like a bowl) and concave down (like a hat). These just distinguish the sign of the concavity - does an increase in steepness mean the ball is plummeting into an abyss at an even faster rate, or that it is shooting to new heights?
+
+Calculating where the direction of concavity changes means finding out where the steepness is zero, or in other words, finding out where the second derivative is zero. In this case we use the same approach as we did with maxima and minima, except these points where direction of concavity changes are called points of inflection.
+
+\subsubsection{Why We Care}
+
+Much like maxima and minima, points of inflection have many applications. In finance, for instance, points of inflection could indicate the impending rapid growth of a company's stock or the possible burst of a bubble. 
+
+\subsection{Theorems That Really Shouldn't Have A Name}
+
+\subsubsection{Rolle's Theorem}
+
+If you have a differentiable function and a closed interval where the endpoints have equal $y$ values (are at the same height) the derivative, or slope, must be zero at some point between those two endpoints. If it's a straight line, the slope of the whole thing will be zero. If it curves at all, there will be maxima and minima with a slope of zero at that point. 
+
+I try to remember the name by thinking about a piece of bread (preferably a roll) rolling between either end point, but I always end up forgetting it. If you have a good way to remember the name, please let me know.
+
+\subsubsection{Mean Value Theorem}
+
+A wrong clock is right twice a day, or so the saying goes. In much the same way, the Mean Value Theorem says that given you have a function that is differentiable on a closed interval, there must be a point on that interval where the derivative is equal to the average slope over the interval.
+
+Think of a car on a long road trip. We can get the average speed by looking at the start speed, end speed, and time the whole trip takes, but this won't account for slowing down because of traffic, speeding up because it's late at night and there are no cops around, coffee breaks, \&c. We can look at the derivative at a bunch of these points to find the speed at them. But along that trip, there has to be some point where the average speed equals the speed at that current moment. 
+
+This makes sense, because we know the average is the 'middle' speed - there are points where we might speed up and slow down, but most of the time we're at that middle speed, or passing through it (remember speed is a continuous value - that's why it needs to be a differentiable function). 
+
+\subsubsection{Why We Care}
+
+Rolle's Theorem is used to prove the Mean Value Theorem. The Mean Value Theorem will strike again later (see section 4.3.3 and section 5).
+
+\subsection{Equation of a Tangent Line}
+
+Say you not only want to find the slope of a curve at a point, but in fact the equation of the tangent line at that point.
+
+For example, if we want to find the equation of the tangent line to $f(x) = 2x^2$ at the point $(2, 3)$. First, we know that the equation of a line can be written as $y - y_1 = m(x - x_1)$, so let's find $m$, the slope - in other words, $f'(x) = 4x$. But we want to know the slope, in particular, at $(2,3)$ or where $x = 2$ - so plug this in, and we find $f'(2) = 4(2) = 8$. So we know $y - y_1 = 8(x-x_1)$ - and we're given $(x_1, y_1) = (2,3)$, so we can just plug that in to get $y-3 = 8(x-2)$. We're done. We could simplify, but often we don't have to.
+
+\subsubsection{Why We Care}
+
+Tangent lines can help us approximate points for a particularly complicated function by using a bunch of short tangent lines to approximate the curve. This is used, for instance, in Newton's Method and Euler's Method (ways of finding roots and solving differential equations, respectively - the latter is briefly covered in section 8), both of which have their own far ranging applications.
+
+\subsection{Implicit Differentiation}
+
+Implicit differentiation is a good way of getting around a common problem - finding the derivative when you can't easily solve for $y$ or $f(x)$. The basic idea is this: say you have a function like $1 = x^2 + y^2$. Sure, you could technically solve for $y$, but that'd be nasty. The other option is using the chain rule. Let's differentiate each side with respect to $x$:
+\begin{align*}
+    \frac{dy}{dx} 1 &= \frac{dy}{dx}x^2 + y^2\\
+    0 & = 2x + \frac{dy}{dx} y^2
+\end{align*}
+
+From here, treat $y$ as some complicated function, and do the chain rule:
+
+\begin{equation*}
+    0 = 2x + 2yy'
+\end{equation*}
+
+We just multiplied by the derivative of $y$, but since we don't know what $y$ is, we called it $y'$...which is awfully convenient, because that's what we're looking for. Now we just solve for $y'$:
+
+\begin{equation*}
+    y' = \frac{dy}{dx} = -\frac{2x}{2y} = -\frac{x}{y}
+\end{equation*}
+
+That's all implicit differentiation is - abusing the chain rule so we can take the derivative without solving a nasty equation.
+\subsubsection{Why We Care}
+
+There's an interesting little consequence of implicit differentiation - it makes it really easy to find the derivative of functions that are inverses of each other when you only know the equation of one of the functions.
+
+We'll make use of this detail when talking about derivatives of inverse trig functions in section 5.3.
+
+\subsubsection{Related Rates}
+
+Another use of implicit differentiation is in 'related rates' problems. The easiest way to see how they work is just to do an example: say you have a spherical balloon being filled at a rate of 4.5 cubic feet per minute. The problem might ask you to find the rate of change of the radius when the radius is 2 feet. 
+
+The key with these problems is simply carefully spelling out variables, and finding out the equation that will allow you to take it from two variables to one variable.
+
+Note that I will be using shorthand here, but if it makes it easier for you when solving these, feel free to spell out $d[\text{balloon volume}]$ instead of just $V$, for instance. Often doing this makes it easier to keep track of what precisely is going on.
+
+So we know the rate of increase of volume, or $\frac{dV}{dt}$, is $4.5 \text{ ft}^3\text{/min}$. We also know that the balloon is spherical, so the volume can be described by the equation $V = \frac{4}{3}\pi r^3$. We're looking for the rate of the change of the radius, so $\frac{dr}{dt}$ when $r=2$.
+
+First, let's take the derivative of the equation for the volume of a sphere with respect to time, $t$:
+\begin{align*}
+    V &= \frac{4}{3}\pi r^3\\
+    \frac{dV}{dt} & = \frac{dV}{dt}\frac{4}{3}\pi r^3\\
+\end{align*}
+
+Here's where implicit differentiation comes in:
+\begin{equation*}
+    \frac{dV}{dt} = \frac{4}{3}\pi 3r^2\frac{dr}{dt}
+\end{equation*}
+Now, we are trying to find $\frac{dr}{dt}$, so let's solve for that (I'm substituting $V'$ and $r'$ in for $\frac{dV}{dt}$ and $\frac{dr}{dt}$):
+\begin{equation*}
+    \frac{3V'}{4\pi 3r^2} = r'
+\end{equation*}
+
+We are given $V' = 4.5$ and that at the moment we are interested in, $r = 2$ (note that sometimes you have to watch the units here, but in this case everything is in feet and minutes so we don't have to worry), so we can just plug those in:
+\begin{equation*}
+    r' = \frac{3(4.5)}{4\pi 3(2)^2} = \frac{9}{32\pi} \approx 0.09 \text{ ft/min}
+\end{equation*}
